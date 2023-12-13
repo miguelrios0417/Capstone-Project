@@ -1,0 +1,14 @@
+import pandas as pd
+correlation_df = pd.read_csv('correlations.csv')
+correlation_df
+
+
+us_df = correlation_df[correlation_df['Country of Residence'] == 'United States']
+us_df
+
+
+uae_df = correlation_df[correlation_df['Country of Residence'] == 'Middle Easter Countries']
+uae_df
+
+uae_df.corr(method='kendall')
+us_df.corr(method='kendall')
